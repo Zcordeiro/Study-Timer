@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Study Timer</title>
+</head>
+
+<body>
+    <button id="videoPause">
+        <img class="text-center w-5 h-5" src="./assets/images/pause-circle-regular.svg" alt="pause-icon">
+    </button>
+
+    <div id="timerBox" class="container mx-auto h-fit w-fit border-8 border-solid bg-slate-300">
+        <button id="hideAllBtn">
+            <img class="text-center w-5 h-5" src="./assets/images/eye-slash-regular.svg" alt="eye-slash-icon">
+        </button>
+
+        <h1 class="text-4xl text-center underline">Timer</h1>
+
+        <div class="text-4xl text-center">
+            <div id="time" class="m-4">25:00</div>
+            <button type="button" class="p-2 border-4 border-double border-black hover:bg-slate-800 hover:text-white"
+                id="startTimer">Start Timer</button>
+            <button type="button"
+                class="hidden p-2 border-4 border-double border-black hover:bg-slate-800 hover:text-white"
+                id="pauseTimer">Pause</button>
+            <button type="button"
+                class="hidden p-2 border-4 border-double border-black hover:bg-slate-800 hover:text-white"
+                id="stopTimer">Reset</button>
+        </div>
+
+        <div class="flex justify-center m-2">
+            <div id="pomodoroLabel" class="col m-4">Study/Work</div>
+            <div id="shortRestLabel" class="col m-4">Short Rest</div>
+            <div id="longRestLabel" class="col m-4">Long Rest</div>
+        </div>
+        <button id="hideSettingBtn">
+            <img class="w-10 h-10" src="./assets/images/cogs-solid.svg" alt="gear_icon">
+        </button>
+
+        <div id="settingsMenu" class="hidden">
+            <h2 class="text-center">Adjust Timer:</h2>
+
+            <div class="timerSettings flex justify-center m-5">
+                <div class="">
+                    <label for="pomodoroDuration" class=""></label> Study/Work:
+                    <div col-sm-10>
+                        <input class="w-1/4 border border-solid" type="number" id="pomodoroDuration">
+                    </div>
+                </div>
+                <div class="">
+                    <label for="shortRest" class=""></label> Short Rest:
+                    <div col-sm-10>
+                        <input value="5" class="w-1/4 border border-solid" type="number" id="shortRest">
+                    </div>
+                </div>
+                <div class="">
+                    <label for="longRest" class=""></label> Long Rest:
+                    <div col-sm-10>
+                        <input value="10" class="w-1/4 border border-solid" type="number" id="longRest">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="./assets/images/backgroundVid.mp4" type="video/mp4">
+    </video>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
