@@ -10,6 +10,11 @@ const shortRestLabel = document.getElementById("shortRestLabel");
 const longRestLabel = document.getElementById("longRestLabel");
 const video = document.getElementById("backgroundVideo");
 const videoPauseBtn = document.getElementById("videoPause");
+const timerContainer = document.getElementById("timerBox");
+const hideTimerBtn = document.getElementById("hideAllBtn");
+const showTimerBtn = document.getElementById("showAllBtn");
+const settingsMenu = document.getElementById("settingsMenu");
+const hideSettingBtn = document.getElementById("hideSettingBtn");
 
 let pomodoroDuration = 25;
 let shortRest = 5;
@@ -92,6 +97,21 @@ function startTimer(duration) {
   }, 1000);
 }
 
+function pomodoroStateTag() {
+
+  let result = '';
+  if(timerState === "pomodoro") {
+    result = 'Work/Study';
+    return result;
+  } else if(timerState === "shortBreak") {
+    result = 'Short Rest';
+    return result;
+  } else {
+    result = 'Long Rest';
+    return result;
+}
+}
+
 pauseTimerBtn.addEventListener("click", () => {
   clearInterval(timerInterval);
   startTimerBtn.classList.toggle('hidden');
@@ -118,6 +138,18 @@ function backgroundPause() {
   } else {
     video.pause();
   }
+};
+
+function hideTimer() {
+  showTimerBtn.classList.toggle('hidden');
+  timerContainer.classList.toggle('hidden');
+};
+
+function showSettings() {
+  settingsMenu.classList.toggle('hidden');
 }
 
+hideSettingBtn.addEventListener('click', showSettings);
+hideTimerBtn.addEventListener('click', hideTimer);
+showTimerBtn.addEventListener('click', hideTimer);
 videoPauseBtn.addEventListener('click', backgroundPause);

@@ -18,7 +18,11 @@
         <img class="text-center w-5 h-5" src="./assets/images/pause-circle-regular.svg" alt="pause-icon">
     </button>
 
-    <div id="timerBox" class="container mx-auto h-fit w-fit border-8 border-solid bg-slate-300">
+    <button id="showAllBtn" class="hidden">
+        <img class="text-center w-10 h-5" src="./assets/images/eye-slash-regular.svg" alt="eye-slash-icon">
+    </button>
+
+    <div id="timerBox" class="container h-2/5 w-1/4 bg-blue-200/40">
         <button id="hideAllBtn">
             <img class="text-center w-5 h-5" src="./assets/images/eye-slash-regular.svg" alt="eye-slash-icon">
         </button>
@@ -30,11 +34,13 @@
             <button type="button" class="p-2 border-4 border-double border-black hover:bg-slate-800 hover:text-white"
                 id="startTimer">Start Timer</button>
             <button type="button"
-                class="hidden p-2 border-4 border-double border-black hover:bg-slate-800 hover:text-white"
-                id="pauseTimer">Pause</button>
+                class="hidden p-1" id="pauseTimer">
+                <img class="text-center w-5 h-5 hover:bg-slate-800/20" src="./assets/images/pause-circle-regular.svg" alt="pause-icon">
+            </button>
             <button type="button"
-                class="hidden p-2 border-4 border-double border-black hover:bg-slate-800 hover:text-white"
-                id="stopTimer">Reset</button>
+                class="hidden p-1" id="stopTimer">
+                <img class="text-center w-5 h-5 hover:bg-slate-800/20" src="./assets/images/stop-fill.svg" alt="stop-icon">
+            </button>
         </div>
 
         <div class="flex justify-center m-2">
@@ -43,7 +49,7 @@
             <div id="longRestLabel" class="col m-4">Long Rest</div>
         </div>
         <button id="hideSettingBtn">
-            <img class="w-10 h-10" src="./assets/images/cogs-solid.svg" alt="gear_icon">
+            <img class="w-4 h-4" src="./assets/images/cogs-solid.svg" alt="gear_icon">
         </button>
 
         <div id="settingsMenu" class="hidden">
@@ -53,19 +59,19 @@
                 <div class="">
                     <label for="pomodoroDuration" class=""></label> Study/Work:
                     <div col-sm-10>
-                        <input class="w-1/4 border border-solid" type="number" id="pomodoroDuration">
+                        <input class="w-1/2 border border-solid" type="number" id="pomodoroDuration">
                     </div>
                 </div>
                 <div class="">
                     <label for="shortRest" class=""></label> Short Rest:
                     <div col-sm-10>
-                        <input value="5" class="w-1/4 border border-solid" type="number" id="shortRest">
+                        <input value="5" class="w-1/2 border border-solid" type="number" id="shortRest">
                     </div>
                 </div>
                 <div class="">
                     <label for="longRest" class=""></label> Long Rest:
                     <div col-sm-10>
-                        <input value="10" class="w-1/4 border border-solid" type="number" id="longRest">
+                        <input value="10" class="w-1/2 border border-solid" type="number" id="longRest">
                     </div>
                 </div>
             </div>
