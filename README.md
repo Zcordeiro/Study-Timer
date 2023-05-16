@@ -32,7 +32,7 @@
 # LINKS
 
  ## Published Page 
-  https://pure-reef-70690.herokuapp.com/
+  https://study-timer-psi.vercel.app/
 
  ## Repo 
   https://github.com/Zcordeiro/Employee-Tracker
